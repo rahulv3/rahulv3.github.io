@@ -648,7 +648,7 @@ input.search-form:hover {
 }
 
 .recent-work-wrap:hover .overlay {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 #services {
@@ -1897,17 +1897,17 @@ ul.social_icons li  a i{
 }
 
 .gmap-area .gmap iframe {
-  border-radius: 50%;
-  height: 280px;
-  width: 300px;
+  /*border-radius: 50%;*/
+  height: 300px;
+  width: 700px;
 }
 
 .gmap{
     border: 10px solid #f6f5f0;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     height: 300px;
-    width: 300px;
-    box-shadow: 0px 0px 3px 3px #e7e4dc;
+    width: 700px;
+    /*box-shadow: 0px 0px 3px 3px #e7e4dc;*/
     overflow: hidden;
     position: relative;
     margin: 0 auto;
