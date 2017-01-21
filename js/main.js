@@ -79,18 +79,27 @@ $(function() {
 	    form_status.removeClass('alert-success').removeClass('alert-danger').addClass('alert-info');
 	    form_status.html('<i class="fa fa-spinner fa-spin"></i> Message is sending...').fadeIn();
 	    form_status.show();
-	    $.ajax({
-	      type: form.attr('method'),
-	      url: form.attr('action'),
-	      data: form.serialize()
-	    }).done(function(data) {
-	      form_status.removeClass('alert-info').removeClass('alert-danger').addClass('alert-success');
-	      form_status.html('Your message was sent successfully!').delay(3000).fadeOut();
-	    }).fail(function(data) {
-	      form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
-	      form_status.html('Something went wrong!').delay(3000).fadeOut();
-	    });
-	    form[0].reset();
+	    var v = grecaptcha.getResponse();
+	    if(v.length == 0)
+	    {
+	    	form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
+	      form_status.html("You can't leave Captcha Code empty").delay(3000).fadeOut();
+	    }
+	    else
+	    {
+		    $.ajax({
+		      type: form.attr('method'),
+		      url: form.attr('action'),
+		      data: form.serialize()
+		    }).done(function(data) {
+		      form_status.removeClass('alert-info').removeClass('alert-danger').addClass('alert-success');
+		      form_status.html('Your message was sent successfully!').delay(3000).fadeOut();
+		    }).fail(function(data) {
+		      form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
+		      form_status.html('Something went wrong!').delay(3000).fadeOut();
+		    });
+		    form[0].reset();
+	    }
 		}
 		else{
 	    event.preventDefault();
