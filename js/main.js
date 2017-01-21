@@ -74,8 +74,8 @@ $(function() {
   $('#main-contact-form').submit(function(event) {
     var submit_btn = $('.contact-submit-btn');
   	submit_btn.addClass('disabled');
+		event.preventDefault();
 		if($('#main-contact-form').valid()){
-			event.preventDefault();
 	    var form = $(this);
 	    var form_status = $('.form_status');
 	    var v = grecaptcha.getResponse();
@@ -106,7 +106,7 @@ $(function() {
 	    }
 		}
 		else{
-	    event.preventDefault();
+			submit_btn.removeClass('disabled');
 	    $('.form_status').hide();
 		}
   });
