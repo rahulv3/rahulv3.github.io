@@ -86,6 +86,7 @@ $(function() {
 	    {
 	    	form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
 	      form_status.html("You can't leave Captcha Code empty").delay(3000).fadeOut();
+	      submit_btn.removeClass('disabled');
 	    }
 	    else
 	    {
@@ -96,14 +97,15 @@ $(function() {
 		    }).done(function(data) {
 		      form_status.removeClass('alert-info').removeClass('alert-danger').addClass('alert-success');
 		      form_status.html('Your message was sent successfully!').delay(3000).fadeOut();
+		      submit_btn.removeClass('disabled');
 		    }).fail(function(data) {
 		      form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
 		      form_status.html('Something went wrong!').delay(3000).fadeOut();
+		      submit_btn.removeClass('disabled');
 		    });
 		    form[0].reset();
 		    grecaptcha.reset();
 	    }
-      submit_btn.removeClass('disabled');
 		}
 		else{
 			submit_btn.removeClass('disabled');
