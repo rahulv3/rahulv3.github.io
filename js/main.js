@@ -101,6 +101,7 @@ $(function() {
 		      form_status.html('Something went wrong!').delay(3000).fadeOut();
 		    });
 		    form[0].reset();
+		    grecaptcha.reset();
 	      submit_btn.removeClass('disabled');
 	    }
 		}
