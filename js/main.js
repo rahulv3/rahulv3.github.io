@@ -102,8 +102,8 @@ $(function() {
 		    });
 		    form[0].reset();
 		    grecaptcha.reset();
-	      submit_btn.removeClass('disabled');
 	    }
+      submit_btn.removeClass('disabled');
 		}
 		else{
 			submit_btn.removeClass('disabled');
