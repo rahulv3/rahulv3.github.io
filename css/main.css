@@ -295,7 +295,6 @@ input.search-form:hover {
 
 .navbar-inverse {
   border: none;
-  border-bottom: 1px solid #222;
 }
 
 .navbar-inverse .navbar-brand {
@@ -373,9 +372,9 @@ input.search-form:hover {
   padding: 0;
 }
 
-#main-slider .carousel .carousel-content {
+/*#main-slider .carousel .carousel-content {
   margin-top: 150px;
-}
+}*/
 
 #main-slider .carousel .slide-margin{
   margin-top: 140px;
@@ -410,7 +409,7 @@ input.search-form:hover {
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 730px;
+  /*height: 730px;*/
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -604,7 +603,7 @@ input.search-form:hover {
 .recent-work-wrap .recent-work-inner{
   top: 0;
   background: transparent;
-  opacity: .8;
+  opacity: 1;
   width: 100%;
   border-radius: 0;
   margin-bottom: 0;
@@ -651,7 +650,7 @@ input.search-form:hover {
 }
 
 .recent-work-wrap:hover .overlay {
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 #services {
@@ -1938,7 +1937,7 @@ ul.social_icons li  a i{
 
 .form-group .form-control {
   padding: 7px 12px;
-  border-color:#f2f2f2;
+  /*border-color:#f2f2f2;*/
   box-shadow: none;
 }
 

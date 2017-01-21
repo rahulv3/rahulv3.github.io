@@ -39,20 +39,21 @@ jQuery(function($) {'use strict',
 	});
 
 	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
+	// var form = $('#main-contact-form');
+	// form.submit(function(event){
+	// 	event.preventDefault();
+	// 	var form_status = $('<div class="form_status"></div>');
+	// 	$.ajax({
+	// 		url: $(this).attr('action'),
 
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
-		});
-	});
+	// 		beforeSend: function(){
+	// 			form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+	// 		}
+	// 	}).done(function(data){
+	// 		alert("Hello");
+	// 		form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
+	// 	});
+	// });
 
 	
 	//goto top
@@ -67,4 +68,33 @@ jQuery(function($) {'use strict',
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
 	});	
+});
+
+$(function() {
+  $('#main-contact-form').submit(function(event) {
+		if($('#main-contact-form').valid()){
+			event.preventDefault();
+	    var form = $(this);
+	    var form_status = $('.form_status');
+	    form_status.removeClass('alert-success').removeClass('alert-danger').addClass('alert-info');
+	    form_status.html('<i class="fa fa-spinner fa-spin"></i> Message is sending...').fadeIn();
+	    form_status.show();
+	    $.ajax({
+	      type: form.attr('method'),
+	      url: form.attr('action'),
+	      data: form.serialize()
+	    }).done(function(data) {
+	      form_status.removeClass('alert-info').removeClass('alert-danger').addClass('alert-success');
+	      form_status.html('Your message was sent successfully!').delay(3000).fadeOut();
+	    }).fail(function(data) {
+	      form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
+	      form_status.html('Something went wrong!').delay(3000).fadeOut();
+	    });
+	    form[0].reset();
+		}
+		else{
+	    event.preventDefault();
+	    $('.form_status').hide();
+		}
+  });
 });

@@ -1,9 +1,50 @@
 .contact-address{
 	font-size: 25px;
+	color: #000;
 }
 .header-logo{
 	max-width: 60px;
 }
 .navbar-toggle{
 	background-color: #191919;
+}
+.navbar-brand{
+	padding-bottom: 15px;
+}
+.btn.btn-success.view-large-btn{
+	margin-top: 28%;
+	font-size: 20px;
+}
+.recent-work-inner{
+	text-align: center;
+}
+.contact-1-center{
+	padding-bottom: 0px;
+}
+.contact-2-center{
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+label.error{
+	color: red !important;
+	font-size: 13px !important;
+}
+#contact-page .contact-form .form-group label{
+  font-weight: 500;
+}
+section#contact-info{
+	background-image: url("../images/map.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-inverse {
+  border-bottom: 1px solid #222;
+  -webkit-box-shadow:0px 1px 1px #de1dde;
+  -moz-box-shadow:0px 1px 1px #de1dde;
+  box-shadow:0px 1px 1px #de1dde;
+}
+.btn-slide.animation{
+	margin-bottom: 120px;
 }
