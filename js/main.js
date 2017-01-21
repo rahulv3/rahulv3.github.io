@@ -72,13 +72,13 @@ jQuery(function($) {'use strict',
 
 $(function() {
   $('#main-contact-form').submit(function(event) {
+    var submit_btn = $('.contact-submit-btn');
   	submit_btn.addClass('disabled');
 		if($('#main-contact-form').valid()){
 			event.preventDefault();
 	    var form = $(this);
 	    var form_status = $('.form_status');
 	    var v = grecaptcha.getResponse();
-	    var submit_btn = $('.contact-submit-btn');
 	    form_status.removeClass('alert-success').removeClass('alert-danger').addClass('alert-info');
 	    form_status.html('<i class="fa fa-spinner fa-spin"></i> Message is sending...').fadeIn();
 	    form_status.show();
