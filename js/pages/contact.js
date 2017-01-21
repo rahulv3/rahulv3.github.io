@@ -44,7 +44,7 @@ $(function() {
         maxlength: "Character limit for the message field is 1000"
       },
       email: {
-        required: "Please provide an email address",
+        required: "Please enter your email address",
         email: "Please enter a valid email address"
       }
     }
