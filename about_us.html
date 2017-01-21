@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>About Us | Photography</title>
-    
-    <!-- core CSS -->
+	
+	<!-- core CSS -->
     <link href="css/load.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
-      <link href="css/main.css" rel="stylesheet">
-      <link href="css/custom.css" rel="stylesheet">
+	  <link href="css/main.css" rel="stylesheet">
+	  <link href="css/custom.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    
+	
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -72,7 +72,7 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="logo" class="header-logo"></a>
                 </div>
-                
+				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
@@ -84,49 +84,49 @@
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-    </header><!--/header-->
+	</header><!--/header-->
 
     <section id="about-us">
         <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>About Photography</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            
-            <!-- about us slider -->
-            <div id="about-slider">
-                <div id="carousel-slider" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators visible-xs">
-                        <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-slider" data-slide-to="1"></li>
-                        <li data-target="#carousel-slider" data-slide-to="2"></li>
-                    </ol>
+			<div class="center wow fadeInDown">
+				<h2>About Photography</h2>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+			
+			<!-- about us slider -->
+			<div id="about-slider">
+				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators visible-xs">
+					    <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-slider" data-slide-to="1"></li>
+					    <li data-target="#carousel-slider" data-slide-to="2"></li>
+				  	</ol>
 
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="images/slider_one.jpg" class="img-responsive" alt=""> 
-                       </div>
-                       <div class="item">
-                            <img src="images/slider_two.jpg" class="img-responsive" alt=""> 
-                       </div> 
-                       <div class="item">
-                            <img src="images/slider_three.jpg" class="img-responsive" alt=""> 
-                       </div> 
-                    </div>
-                    
-                    <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
-                        <i class="fa fa-angle-left"></i> 
-                    </a>
-                    
-                    <a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
-                        <i class="fa fa-angle-right"></i> 
-                    </a>
-                </div> <!--/#carousel-slider-->
-            </div><!--/#about-slider-->
-        </div><!--/.container-->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div>
+					   <div class="item">
+							<img src="images/slider_two.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					   <div class="item">
+							<img src="images/slider_three.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					</div>
+					
+					<a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+					
+					<a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+				</div> <!--/#carousel-slider-->
+			</div><!--/#about-slider-->
+		</div><!--/.container-->
     </section><!--/about-us-->
-    
+	
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -153,14 +153,7 @@
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script type="text/javascript">
-        $('.carousel').carousel();
-        $(".carousel").swipe({
-          swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-            if (direction == 'left') $(this).carousel('next');
-            if (direction == 'right') $(this).carousel('prev');
-          },
-          allowPageScroll:"vertical"
-        });
+        $('.carousel').carousel()
     </script>
     <script src="js/vendor/load.js"></script>
 </body>
