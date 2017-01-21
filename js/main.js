@@ -98,12 +98,12 @@ $(function() {
 		      form_status.removeClass('alert-info').removeClass('alert-danger').addClass('alert-success');
 		      form_status.html('Your message was sent successfully!').delay(3000).fadeOut();
 		      submit_btn.removeClass('disabled');
+			    form[0].reset();
 		    }).fail(function(data) {
 		      form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
 		      form_status.html('Something went wrong!').delay(3000).fadeOut();
 		      submit_btn.removeClass('disabled');
 		    });
-		    form[0].reset();
 		    grecaptcha.reset();
 	    }
 		}
