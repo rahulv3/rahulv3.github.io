@@ -4,5 +4,5 @@
   position:fixed;
   z-index:9999;
   /*background:url("../images/logo_animated.gif") no-repeat center center rgba(0,0,0,0.20)*/
-  background: rgba(0,0,0,0.20)
+  background: rgba(0,0,0,0)
 }
