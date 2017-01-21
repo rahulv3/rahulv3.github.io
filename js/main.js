@@ -72,6 +72,7 @@ jQuery(function($) {'use strict',
 
 $(function() {
   $('#main-contact-form').submit(function(event) {
+  	submit_btn.addClass('disabled');
 		if($('#main-contact-form').valid()){
 			event.preventDefault();
 	    var form = $(this);
@@ -88,7 +89,6 @@ $(function() {
 	    }
 	    else
 	    {
-	    	submit_btn.addClass('disabled');
 		    $.ajax({
 		      type: form.attr('method'),
 		      url: form.attr('action'),
