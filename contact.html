@@ -8,6 +8,7 @@
     <title>Contact Us | Photography</title>
     
     <!-- core CSS -->
+    <link href="css/load.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -40,7 +41,7 @@
 </head><!--/head-->
 
 <body>
-
+		<div id="load"></div>
     <header id="header">
         <div class="top-bar">
             <div class="container">
@@ -78,7 +79,7 @@
                         <li><a href="about_us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li class="active"><a href="contact_us.html">Contact</a></li>                        
+                        <li class="active"><a href="contact.html">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -135,15 +136,27 @@
                             <input type="number" name="phone" required="required" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Subject *</label>
-                            <input type="text" name="subject" class="form-control" required="required">
+                            <label>Event Type *</label>
+                            <select name="subject" class="form-control" required="required">
+                              <option value="">Event Type</option>
+                              <option value="Wedding">Wedding</option>
+                              <option value="Babies &amp; Kids">Babies &amp; Kids</option>
+                              <option value="Fashion &amp; Portfolio">Fashion &amp; Portfolio</option>
+                              <option value="Commercial">Commercial</option>
+                              <option value="Special Occasion">Special occasion</option>
+                              <option value="Corporate Events">Corporate Events</option>
+                              <option value="Travel">Travel</option>
+                              <option value="Nature">Nature</option>
+                              <option value="Others">Others</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label>Message *</label>
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                        </div>                        
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LcBsBIUAAAAALlqGDzOAEod4-RJIQRhqe9CdkK5"></div>
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
                         </div>
@@ -157,14 +170,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2016 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                    &copy; 2017 <a target="_blank" href="#">Photography</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <!-- <li><a href="#">Faq</a></li> -->
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -179,5 +192,7 @@
     <script src="js/pages/contact.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/vendor/load.js"></script>
 </body>
 </html>

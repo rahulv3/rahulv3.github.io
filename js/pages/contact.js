@@ -13,7 +13,7 @@ $(function() {
     messages: {
       name: "Please enter your name",
       phone: "Please enter your phone number",
-      subject: "Please enter the subject",
+      subject: "Please select the event type",
       message: "Please enter the message",
       email: {
         required: "Please provide an email address",
