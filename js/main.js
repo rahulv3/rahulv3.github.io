@@ -76,10 +76,11 @@ $(function() {
 			event.preventDefault();
 	    var form = $(this);
 	    var form_status = $('.form_status');
+	    var v = grecaptcha.getResponse();
+	    var submit_btn = $('.contact-submit-btn');
 	    form_status.removeClass('alert-success').removeClass('alert-danger').addClass('alert-info');
 	    form_status.html('<i class="fa fa-spinner fa-spin"></i> Message is sending...').fadeIn();
 	    form_status.show();
-	    var v = grecaptcha.getResponse();
 	    if(v.length == 0)
 	    {
 	    	form_status.removeClass('alert-info').removeClass('alert-success').addClass('alert-danger');
@@ -87,6 +88,7 @@ $(function() {
 	    }
 	    else
 	    {
+	    	submit_btn.addClass('disabled');
 		    $.ajax({
 		      type: form.attr('method'),
 		      url: form.attr('action'),
@@ -99,6 +101,7 @@ $(function() {
 		      form_status.html('Something went wrong!').delay(3000).fadeOut();
 		    });
 		    form[0].reset();
+	      submit_btn.removeClass('disabled');
 	    }
 		}
 		else{
